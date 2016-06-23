@@ -17,13 +17,24 @@ var races = [
 	"The Clan of Saar"
 ];
 
+var techs = [
+	// name, description, color, prerequisites, prerequisite operator (and|or)
+	["", "", "", [], ""],
+	["", "", "", [], ""],
+	["", "", "", [], ""],
+	["", "", "", [], ""],
+	["", "", "", [], ""],
+	["", "", "", [], ""],
+];
+
 function raceSelected(race) {
 	my_race = race.value;
 	document.getElementById('header').style.display = 'block';
+	document.getElementById('unit-div').style.display = 'block';
+	document.getElementById('tech-div').style.display = 'block';
+	document.getElementById('race-div').style.display = 'none';
 	document.getElementById('header-title').innerText = my_race;
 
-	document.getElementById('race-div').style.display = 'none';
-	document.getElementById('unit-div').style.display = 'block';
 
 	//jon-nar -1 on all combat rolls
 	if (my_race === "The Universities of Jol-Nar") {

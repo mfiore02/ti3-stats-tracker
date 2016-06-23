@@ -7,16 +7,17 @@
 
     <body id="body">
         <div id="header" style="display: none">
-            <h1 id="header-title"></h1>
+            <div id="header-title"></div>
         </div>
         <div id="race-div">
-            <h3>Select a Race...</h3>
+            <div>Select a Race...</div>
             <select id="race-list" onchange="raceSelected(this)">
                 <option selected="None">None</option>
             </select>
         </div>
 
         <div id="unit-div" style="display: none">
+            <div>Units</div>
             <table id="unit-table">
                 <tr id="unit-headers">
                     <th>UNIT</th>
@@ -101,6 +102,20 @@
         </div>
 
         <div id="tech-div" style="display: none">
+            <div id="tech-owned" style="clear: left">
+                <div>Owned Technology</div>
+                <div id="owned-tech-red" style="width: 400px; float: left;">owned red tech</div>
+                <div id="owned-tech-blue" style="width: 400px; float: left;">owned blue tech</div>
+                <div id="owned-tech-racial" style="width: 400px; float: left">owned racial tech</div>
+                <div id="owned-tech-yellow" style="width: 400px; float: left">owned yellow tech</div>
+            </div>
+            <div id="tech-available" style="clear: left">
+                <div>Available Technology</div>
+                <div id="available-tech-red" style="width: 400px; float: left;">available red tech</div>
+                <div id="available-tech-blue" style="width: 400px; float: left;">available blue tech</div>
+                <div id="available-tech-racial" style="width: 400px; float: left">available racial tech</div>
+                <div id="available-tech-yellow" style="width: 400px; float: left">available yellow tech</div>
+            </div>
         </div>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
