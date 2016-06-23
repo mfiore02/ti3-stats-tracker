@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+
+    <head>
+        <title>Twilight Imperium Stats</title>
+    </head>
+
+    <body id="body">
+        <div id="race-div">
+            <h3>Select a Race...</h3>
+            <select id="race-list" onchange="raceSelected(this)">
+                <option selected="None">None</option>
+            </select>
+        </div>
+
+        <div id="unit-div" style="display: none">
+            <table id="unit-table">
+                <tr>
+                    <th>UNIT</th>
+                    <th>COST</th>
+                    <th>BATTLE</th>
+                    <th>MVMT</th>
+                    <th>SPECIAL</th>
+                </tr>
+            </table>
+        </div>
+
+        <div id="tech-div" style="display: none">
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script src="js/app.js"></script>
+    </body>
+
+</html>
