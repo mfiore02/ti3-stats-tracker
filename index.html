@@ -6,6 +6,9 @@
     </head>
 
     <body id="body">
+        <div id="header" style="display: none">
+            <h1 id="header-title"></h1>
+        </div>
         <div id="race-div">
             <h3>Select a Race...</h3>
             <select id="race-list" onchange="raceSelected(this)">
@@ -15,12 +18,84 @@
 
         <div id="unit-div" style="display: none">
             <table id="unit-table">
-                <tr>
+                <tr id="unit-headers">
                     <th>UNIT</th>
                     <th>COST</th>
-                    <th>BATTLE</th>
+                    <th colspan="2">BATTLE</th>
                     <th>MVMT</th>
                     <th>SPECIAL</th>
+                </tr>
+                <tr id="unit-dreadnought">
+                    <td>Dreadnought</td>
+                    <td>5</td>
+                    <td>5</td>
+                    <td></td>
+                    <td>1</td>
+                    <td>Bombardment, Sustain Damage</td>
+                </tr>
+                <tr id="unit-carrier">
+                    <td>Carrier</td>
+                    <td>3</td>
+                    <td>9</td>
+                    <td></td>
+                    <td>1</td>
+                    <td>Capacity: 6</td>
+                </tr>
+                <tr id="unit-cruiser">
+                    <td>Cruiser</td>
+                    <td>2</td>
+                    <td>7</td>
+                    <td></td>
+                    <td>2</td>
+                    <td></td>
+                </tr>
+                <tr id="unit-destroyer">
+                    <td>Destroyer</td>
+                    <td>1</td>
+                    <td>9</td>
+                    <td></td>
+                    <td>2</td>
+                    <td>Anti-Fighter Barrage</td>
+                </tr>
+                <tr id="unit-fighter">
+                    <td>Fighter (x2)</td>
+                    <td>1</td>
+                    <td>9</td>
+                    <td></td>
+                    <td>n/a</td>
+                    <td></td>
+                </tr>
+                <tr id="unit-war-sun">
+                    <td>War Sun</td>
+                    <td>12</td>
+                    <td>3</td>
+                    <td>(x3)</td>
+                    <td>2</td>
+                    <td>Bombardment, Capacity: 6, Sustain Damage</td>
+                </tr>
+                <tr id="unit-ground-force">
+                    <td>Ground Force (x2)</td>
+                    <td>1</td>
+                    <td>8</td>
+                    <td></td>
+                    <td>-</td>
+                    <td></td>
+                </tr>
+                <tr id="unit-pds">
+                    <td>PDS</td>
+                    <td>1</td>
+                    <td>6</td>
+                    <td></td>
+                    <td>-</td>
+                    <td>Planetary Shield, Space Cannon</td>
+                </tr>
+                <tr id="unit-space-dock">
+                    <td>Space Dock</td>
+                    <td>4</td>
+                    <td>-</td>
+                    <td></td>
+                    <td>-</td>
+                    <td>Produce Units, Fighter Capacity: 3</td>
                 </tr>
             </table>
         </div>
