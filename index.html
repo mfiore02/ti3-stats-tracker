@@ -102,21 +102,218 @@
         </div>
 
         <div id="tech-div" style="display: none">
-            <div id="tech-owned" style="clear: left">
+            <div id="tech" style="clear: left">
                 <div>Owned Technology</div>
-                <div id="owned-tech-red" style="width: 300px; float: left;">owned red tech</div>
-                <div id="owned-tech-blue" style="width: 300px; float: left;">owned blue tech</div>
-                <div id="owned-tech-yellow" style="width: 300px; float: left">owned yellow tech</div>
-                <div id="owned-tech-green" style="width: 300px; float: left">owned green tech</div>
-                <div id="owned-tech-racial" style="width: 300px; float: left">owned racial tech</div>
-            </div>
-            <div id="tech-available" style="clear: left">
-                <div>Available Technology</div>
-                <div id="available-tech-red" style="width: 300px; float: left;">available red tech</div>
-                <div id="available-tech-blue" style="width: 300px; float: left;">available blue tech</div>
-                <div id="available-tech-yellow" style="width: 300px; float: left">available yellow tech</div>
-                <div id="available-tech-green" style="width: 300px; float: left">available green tech</div>
-                <div id="available-tech-racial" style="width: 300px; float: left">available racial tech</div>
+                <div id="tech-red" style="width: 300px; float: left;">
+                    <div style="display: none">
+                        <button type = "button" onclick="tech_hylar_v_assault_laser()">Add</div>
+                        <div>Hylar V Assault Laser</div>
+                        <div>None </div>
+                        <div>All of your Cruisers and Destroyers now receive +1 on all combat rolls.</div>
+                    </div>
+                    <div style="display: none">
+                        <button type = "button" onclick="tech_auto_defense_turrets()">Add</div>
+                        <div>Auto Defense Turrets </div>
+                        <div>Hylar V Assault Laser </div>
+                        <div>All of your destroyers receive +2 and roll 1 additional die on all Anti-Fighter Barrage rolls. (SE)</div>
+                    </div>
+                    <div style="display: none">
+                        <button type = "button" onclick="tech_deep_space_cannon()">Add</div>
+                        <div>Deep Space Cannon </div>
+                        <div>Hylar V Assault Laser </div>
+                        <div>Enemy fleets in adjacent systems are now in range of your PDS units.</div>
+                    </div>
+                    <!--
+                    <div style="display: none">
+                        <button type = "button" onclick="tech_duranium_armor()">Add</div>
+                        <div>Duranium Armor </div>
+                        <div>Deep Space Cannon </div>
+                        <div>At the end of each round of combat you may repair 1 of your damaged units in battle. (ST)</div>
+                    </div>
+                    -->
+                    <div style="display: none">
+                        <button type = "button" onclick="tech_assault_cannon()">Add</div>
+                        <div>Assault Cannon </div>
+                        <div>Auto Defense Turrets AND Cybernetics </div>
+                        <div>Before any Space Battle begins, your participating Dreadnoughts may each fire one shot. Any hits are applied immediately and casualties do not receive return fire.</div>
+                    </div>
+                    <div style="display: none">
+                        <button type = "button" onclick="tech_magen_defense_grid()">Add</div>
+                        <div>Magen Defense Grid </div>
+                        <div>Deep Space Cannon </div>
+                        <div>All of your PDS units now receive +1 on all combat rolls. In addition, all of your defending ground forces on a planet with a PDS receive +1 on all combat rolls during Invasion Combat.</div>
+                    </div>
+                    <div style="display: none">
+                        <button type = "button" onclick="tech_war_sun()">Add</div>
+                        <div>War Sun </div>
+                        <div>Deep Space Cannon AND Sarween Tools </div>
+                        <div>You are now allowed to produce War Sun units.</div>
+                    </div>
+                    <div style="display: none">
+                        <button type = "button" onclick="tech_graviton_negator()">Add</div>
+                        <div>Graviton Negator</div>
+                        <div>Assault Cannon OR Dacxive Animators </div>
+                        <div>Your Dreadnoughts may now bombard planets that contain PDS units. Your Fighters may now participate in Invasion Combat. Surviving Fighters are returned to space after the combat and can never establish control of a planet.</div>
+                    </div>
+                </div>
+                <div id="tech-blue" style="width: 300px; float: left;">
+                    <div style="display: none">
+                        <button type = "button" onclick="tech_antimass_deflectors()">Add</div>
+                        <div>Antimass Deflectors</div>
+                        <div>None </div>
+                        <div>All of your ships may now move through Asteroid Fields but may never end their movement in an Asteroid Field.</div>
+                    </div>
+                    <div style="display: none">
+                        <button type = "button" onclick="tech_xrd_transporters()">Add</div>
+                        <div>XRD Transporters</div>
+                        <div>Antimass Deflectors </div>
+                        <div>All of your Carriers now receive +1 movement.</div>
+                    </div>
+                    <!--
+                    <div style="display: none">
+                        <button type = "button" onclick="tech_gravity_drive()">Add</div>
+                        <div>Gravity Drive </div>
+                        <div>Antimass Deflectors</div>
+                        <div>You do not need to roll for your ships when moving out of a Gravity Rift. If your ships begin their Activation in a system adjacent to a Gravity Rift or Wormhole, you receive +1 movement. (ST)</div>
+                    </div>
+                    -->
+                    <div style="display: none">
+                        <button type = "button" onclick="tech_manuvering_jets()">Add</div>
+                        <div>Maneuvering Jets </div>
+                        <div>XRD Transporters </div>
+                        <div>Your opponents receive -1 to all PDS rolls targeting your ships (or -2 if the PDS is firing from an adjacent system). In addition, you receive -1 to all of your Space Mine rolls, and your ships do not have to stop when entering an Ion System. (SE)</div>
+                    </div>
+                    <div style="display: none">
+                        <button type = "button" onclick="tech_light_wave_deflector()">Add</div>
+                        <div>Light Wave Deflector </div>
+                        <div>XRD Transporter AND Magen Defense Grid </div>
+                        <div>Your ships may now move through systems containing enemy ships and continue their movement to the activated system.</div>
+                    </div>
+                    <div style="display: none">
+                        <button type = "button" onclick="tech_type_iv_drive()">Add</div>
+                        <div>Type IV Drive </div>
+                        <div>XRD Transporters AND Neural Motivator </div>
+                        <div>All of your Cruisers and Dreadnoughts now receive +1 movement.</div>
+                    </div>
+                    <div style="display: none">
+                        <button type = "button" onclick="tech_advanced_fighters()">Add</div>
+                        <div>Advanced Fighters </div>
+                        <div>Type IV Drive </div>
+                        <div>Your Fighters may now move independently with a movement rate of 2, and receive +1 on combat rolls. Your Fighters do not require the support of Carriers or Space Docks, and enemy ships may not move through a system your Fighters occupy. Fighters in excess of a system’s fighter capacity will count towards your Fleet Supply limit.</div>
+                    </div>
+                    <div style="display: none">
+                        <button type = "button" onclick="tech_fleet_logistics()">Add</div>
+                        <div>Fleet Logistics </div>
+                        <div>Gravitation Negator </div>
+                        <div>When taking a Tactical Action, you may now take two Tactical Actions, one after the other, before your turn ends.</div>
+                    </div>
+                </div>
+                <div id="tech-yellow" style="width: 300px; float: left">
+                    <!--
+                    <div style="display: none">
+                        <button type = "button" onclick="tech_transfabrication()">Add</div>
+                        <div>Transfabrication</div>
+                        <div>None </div>
+                        <div>You may scuttle units at the start of the produce units step of your activation. For each non-fighter and non-Ground Force unit you scuttle in this way, gain 1 trade good. Units scuttled by Transfabrication may not be reproduced during the same game turn. (ST)</div>
+                    </div>
+                    -->
+                    <div style="display: none">
+                        <button type = "button" onclick="tech_enviro_compensator()">Add</div>
+                        <div>Enviro Compensator</div>
+                        <div>None</div>
+                        <div>The production capacity of your space docks is now increased by 1.</div>
+                    </div>
+                    <div style="display: none">
+                        <button type = "button" onclick="tech_sarween_tools()">Add</div>
+                        <div>Sarween Tools</div>
+                        <div>Enviro Compensator</div>
+                        <div>Whenever you produce units in any Space Dock, you now receive one additional resource with which to build units.</div>
+                    </div>
+                    <div style="display: none">
+                        <button type = "button" onclick="tech_micro_technology()">Add</div>
+                        <div>Micro Technology</div>
+                        <div>Stasis Capsules OR Sarween Tools</div>
+                        <div>When you receive trade goods from your trade agreements, you now receive one extra Trade Good for each of your active trade agreements.</div>
+                    </div>
+                    <div style="display: none">
+                        <button type = "button" onclick="tech_nano_technology()">Add</div>
+                        <div>Nano Technology</div>
+                        <div>Micro Technology</div>
+                        <div>Your Dreadnaughts and War Suns may not be targeted by your opponents’ action cards. In addition, when you claim a planet you gain its planet card refreshed. (SE)</div>
+                    </div>
+                    <div style="display: none">
+                        <button type = "button" onclick="tech_integrated_economy()">Add</div>
+                        <div>Integrated Economy</div>
+                        <div>Cybernetics AND Micro Technology</div>
+                        <div>When producing units at your Space Docks, you may now place the new units in any activated, adjacent system that is empty or friendly. You may place PDS and Ground Force units on any friendly planet within this range.  </div>
+                    </div>
+                    <div style="display: none">
+                        <button type = "button" onclick="tech_transit_diodes()">Add</div>
+                        <div>Transit Diodes</div>
+                        <div>Light Wave Deflector OR Dacxive Animator</div>
+                        <div>As an action, you my spend one Command Counter from your Strategic Allocation to immediately move up to four of your Ground Forces from any one of your planets to any other planet you control.</div>
+                    </div>
+                    <div style="display: none">
+                        <button type = "button" onclick="tech_graviton_laser_system()">Add</div>
+                        <div>Graviton Laser System</div>
+                        <div>Deep Space Cannon</div>
+                        <div>When you make a combat roll with a PDS unit and miss, you may now make a single re-roll for each roll that missed.</div>
+                    </div>
+                </div>
+                <div id="tech-green" style="width: 300px; float: left">
+                    <div style="display: none">
+                        <button type = "button" onclick="tech_statis_capsules()">Add</div>
+                        <div>Stasis Capsules </div>
+                        <div>Enviro Compensator </div>
+                        <div>Your Cruisers and Dreadnoughts may now carry one Ground Force unit.</div>
+                    </div>
+                    <div style="display: none">
+                        <button type = "button" onclick="tech_cybernetics()">Add</div>
+                        <div>Cybernetics </div>
+                        <div>Antimass Deflectors OR Stasis Capsules </div>
+                        <div>All of your Fighters now receive +1 on all combat rolls. </div>
+                    </div>
+                    <div style="display: none">
+                        <button type = "button" onclick="tech_neural_motivator()">Add</div>
+                        <div>Neural Motivator </div>
+                        <div>Stasis Capsules OR Micro Technology </div>
+                        <div>You now draw one extra Action Card during each Status Phase.</div>
+                    </div>
+                    <div style="display: none">
+                        <button type = "button" onclick="tech_gen_synthesis()">Add</div>
+                        <div>Gen Systhesis </div>
+                        <div>Cybernetics </div>
+                        <div>All of your Ground Force units now receive +1 on all combat rolls during Invasion Combat. When one of your Ground Force units is destroyed, roll a die: On a result of 5+, the unit is instead returned to a planet in your Home System.</div>
+                    </div>
+                    <div style="display: none">
+                        <button type = "button" onclick="tech_hyper_metabolism()">Add</div>
+                        <div>Hyper Metabolism </div>
+                        <div>Gen Synthesis </div>
+                        <div>During each Status Phase you gain 1 additional Command Counter. In addition, before drawing Action Cards, you may discard 1 Action Card from your hand to draw 1 additional card. (SE)</div>
+                    </div>
+                    <div style="display: none">
+                        <button type = "button" onclick="tech_dacxive_animators()">Add</div>
+                        <div>Dacxive Animators</div>
+                        <div>Neural Motivators </div>
+                        <div>If you win an Invasion Combat, roll once for every Ground Force unit killed (yours and your opponent’s). For every roll of 6+, place one Ground Force unit on the planet from your reinforcements.</div>
+                    </div>
+                    <!--
+                    <div style="display: none">
+                        <button type = "button" onclick="tech_neural_computing()">Add</div>
+                        <div>Neural Computing</div>
+                        <div>Neural Motivators </div>
+                        <div>Your cost to purchase new Technology is reduced by 2. (ST)</div>
+                    </div>
+                    -->
+                    <div style="display: none">
+                        <button type = "button" onclick="tech_x89_bacterial_weapon()">Add</div>
+                        <div>X-89 Bacterial Weapon </div>
+                        <div>Assault Cannon OR Transit Diodes </div>
+                        <div>Your Dreadnought or War Sun units may now use this option before bombarding.  Immediately destroy all Ground Forces on the planet. Then discard all your Action Cards.</div>
+                    </div>
+                </div>
+                <div id="tech-racial" style="width: 300px; float: left">
+                </div>
             </div>
         </div>
 
