@@ -1,6 +1,4 @@
-var my_techs;
 var my_race = "";
-
 var races = [
 	"The Barony of Letnev",
 	"The Emirates of Hacan",
@@ -17,6 +15,8 @@ var races = [
 	"The Clan of Saar"
 ];
 
+var my_owned_techs = [];
+var my_available_techs = [];
 var techs = [
 	// name, description, color, prerequisites, prerequisite operator (and|or)
 	["Enviro Compensator", "The production capacity of your space docks is now increased by 1.", "yellow", [], ""],
@@ -48,6 +48,47 @@ var techs = [
 	["Cybernetics", "All of your Fighters now receive +1 on all combat rolls.", "green", ["Antimass Deflectors", "Stasis Capsules"], "or"],
 	["Magen Defense Grid", "All of your PDS units now receive +1 on all combat rolls. In addition, all of your defending ground forces on a planet with a PDS receive +1 on all combat rolls during Invasion Combat.", "red", ["Deep Space Cannon"], ""]
 ];
+
+function updateAvailableTechs() {
+    for (var i = 0; i < techs.length; i++) {
+    }
+}
+
+function displayAvailableTech(tech) {
+    alert(tech);
+    var d = document.createElement('div');
+    var name = document.createElement('div');
+    name.innerHTML = tech[0];
+    var prereqs = document.createElement('div');
+    if (tech[3].length === 0) {
+        prereqs.innerHTML = "None";
+    } else if (tech[3].length === 1) {
+        prereqs.innerHTML = tech[3];
+    } else {
+        prereqs.innerHTML = tech[3][0] + " " + tech[4] + " " + tech[3][1];
+    }
+    var text = document.createElement('div');
+    text.innerHTML = tech[1];
+    var color = document.createElement('div');
+    color.innerHTML = tech[2];
+
+    d.appendChild(name);
+    d.appendChild(prereqs);
+    d.appendChild(text);
+    d.appendChild(color);
+
+    if (tech[2] === "red") {
+        document.getElementById('available-tech-red').appendChild(d);
+    } else if (tech[2] === "blue") {
+        document.getElementById('available-tech-blue').appendChild(d);
+    } else if (tech[2] === "yellow") {
+        document.getElementById('available-tech-yellow').appendChild(d);
+    } else if (tech[2] === "green") {
+        document.getElementById('available-tech-green').appendChild(d);
+    } else {
+        document.getElementById('available-tech-racial').appendChild(d);
+    }
+}
 
 function raceSelected(race) {
 	my_race = race.value;
@@ -101,6 +142,16 @@ function raceSelected(race) {
 		var unit = document.getElementById('unit-space-dock');
 		unit.cells[4].innerHTML = 1;
 	}
+
+    // add initial available techs
+    for (var i = 0; i < techs.length; i++) {
+        if (techs[i][3].length === 0) {
+            my_available_techs.push(techs.splice(i, 1));
+        }
+    }
+    for (var i = 0; i < my_available_techs.length; i++) {
+        displayAvailableTech(my_available_techs[i]);
+    }
 }
 
 var main = function() {
