@@ -28,7 +28,7 @@ When producing units at your Space Docks, you may now place the new units in any
 
 Light Wave Deflector 
 XRD Transporter AND Magen Defense Grid 
-You ships may now move through systems containing enemy ships and continue their movement to the activated system.
+Your ships may now move through systems containing enemy ships and continue their movement to the activated system.
 
 Type IV Drive 
 XRD Transporters AND Neural Motivator 
@@ -112,7 +112,7 @@ You may scuttle units at the start of the produce units step of your activation.
 
 Assault Cannon 
 Auto Defense Turrets AND Cybernetics 
-Before any Space Battle begins, your participating Dreadnoughts may each fire one shot. Any hits are applied immediately and casualties do not receive return fire
+Before any Space Battle begins, your participating Dreadnoughts may each fire one shot. Any hits are applied immediately and casualties do not receive return fire.
 
 Antimass Deflectors
 None 
@@ -130,3 +130,4 @@ Magen Defense Grid
 Deep Space Cannon 
 All of your PDS units now receive +1 on all combat rolls. In addition, all of your defending ground forces on a planet with a PDS receive +1 on all combat rolls during Invasion Combat.
 
+CHECKED AGAINST TECH TREE - ALL GOOD
